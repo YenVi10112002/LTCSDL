@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyShopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'MyShop.dbo.ChiTietHoaDon' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ChiTietHoaDon">
+          <Property Name="SoLuong" Type="int" />
+          <Property Name="DonGia" Type="float" />
+          <Property Name="MauSac" Type="nvarchar" MaxLength="20" />
+        </EntityType>-->
+  <EntityType Name="HoaDon">
+    <Key>
+      <PropertyRef Name="IDHoaDon" />
+    </Key>
+    <Property Name="IDHoaDon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NgayLap" Type="date" />
+    <Property Name="ThanhTien" Type="float" />
+    <Property Name="ThueVAT" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'MyShop.dbo.KhachHang' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="KhachHang">
+          <Property Name="TenKH" Type="nvarchar" MaxLength="20" />
+          <Property Name="SDT" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'MyShop.dbo.NhaCungCap' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="NhaCungCap">
+          <Property Name="IDNhaCC" Type="nvarchar" MaxLength="20" />
+          <Property Name="TenNhaCC" Type="nvarchar" MaxLength="50" />
+          <Property Name="SDT" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'MyShop.dbo.NhanVien' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="NhanVien">
+          <Property Name="IDNhanVien" Type="nvarchar" MaxLength="20" />
+          <Property Name="TenNV" Type="nvarchar" MaxLength="50" />
+          <Property Name="LuongNV" Type="float" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'MyShop.dbo.PhieuNhapHang' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="PhieuNhapHang">
+          <Property Name="IDPhieuNhap" Type="nvarchar" MaxLength="20" />
+          <Property Name="TenPhieuNhap" Type="nvarchar" MaxLength="50" />
+          <Property Name="SoLuong" Type="int" />
+          <Property Name="DonGia" Type="float" />
+          <Property Name="ThanhTien" Type="float" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'MyShop.dbo.PhieuThongKe' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="PhieuThongKe">
+          <Property Name="IDPhieuTK" Type="nvarchar" MaxLength="20" />
+          <Property Name="NgayTK" Type="date" />
+          <Property Name="DoanhThu" Type="float" />
+        </EntityType>-->
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="IDSanPham" />
+    </Key>
+    <Property Name="IDSanPham" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenSP" Type="nvarchar" MaxLength="50" />
+    <Property Name="XuatXu" Type="nvarchar" MaxLength="20" />
+    <Property Name="GiaBan" Type="float" />
+    <Property Name="DonViTinh" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TaiKhoan">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="UserName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DislayName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PassWord" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+  </EntityType>
+  <Function Name="SP_GetAccountByUsername" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+    <Parameter Name="password" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="MyShopModelStoreContainer">
+    <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

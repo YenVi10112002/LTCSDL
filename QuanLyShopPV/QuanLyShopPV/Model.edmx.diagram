@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c56aa4eee2f44c9d94f90c3b17d276cb" Name="Diagram1">
+        <EntityTypeShape EntityType="MyShopModel.Account" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyShopModel.ChiTietHoaDon" Width="1.5" PointX="12.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyShopModel.ChiTietPN" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyShopModel.HoaDon" Width="1.5" PointX="10" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyShopModel.KhachHang" Width="1.5" PointX="7.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyShopModel.NhaCungCap" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyShopModel.NhanVien" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyShopModel.PhieuNhap" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyShopModel.SanPham" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="MyShopModel.FK__NhanVien__IDAcc__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="MyShopModel.FK__ChiTietHoa__IDHD__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="MyShopModel.FK__ChiTietHoa__IDSP__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="MyShopModel.FK__ChiTietPN__IDPN__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="MyShopModel.FK__ChiTietPN__IDSP__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="MyShopModel.FK__HoaDon__IDKH__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="MyShopModel.FK__PhieuNhap__IDNCC__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="MyShopModel.FK__PhieuNhap__IDNV__2C3393D0" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
