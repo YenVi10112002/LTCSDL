@@ -695,6 +695,8 @@ namespace QuanLyShopPV
             this.dgvBill.Size = new System.Drawing.Size(972, 576);
             this.dgvBill.TabIndex = 0;
             this.dgvBill.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDonHang_CellClick);
+            this.dgvBill.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBill_CellContentClick);
+            this.dgvBill.DoubleClick += new System.EventHandler(this.dgvBill_DoubleClick);
             // 
             // tabAcount
             // 

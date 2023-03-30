@@ -72,6 +72,18 @@ namespace QuanLyShopPV.DAO
             }).ToList();
             return dse;
         }
+        public dynamic LoadCTBill(string maHD)
+        {
+            var ds = db.ChiTietHoaDons.Where(s => s.IDHD == maHD)
+                .Select(s => new
+                {
+                    s.IDHD,
+                    s.SanPham.TenSP,
+                    s.SoLuong,
+                    s.DonGia
+                }).ToList();
+            return ds;
+        }
         
     }
 }

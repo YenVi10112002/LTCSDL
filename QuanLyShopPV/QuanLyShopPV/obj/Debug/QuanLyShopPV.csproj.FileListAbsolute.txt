@@ -16,3 +16,4 @@ D:\BTL_LTCSDL\QuanLyShopPV\QuanLyShopPV\bin\Debug\EntityFramework.xml
 D:\BTL_LTCSDL\QuanLyShopPV\QuanLyShopPV\bin\Debug\EntityFramework.SqlServer.xml
 D:\BTL_LTCSDL\QuanLyShopPV\QuanLyShopPV\obj\Debug\QuanLyShopPV.csproj.CopyComplete
 D:\BTL_LTCSDL\QuanLyShopPV\QuanLyShopPV\obj\Debug\QuanLyShopPV.fAdmin.resources
+D:\BTL_LTCSDL\QuanLyShopPV\QuanLyShopPV\obj\Debug\QuanLyShopPV.fCTDetails.resources

@@ -116,9 +116,9 @@ namespace QuanLyShopPV
         {
             if (e.RowIndex >= 0 && e.RowIndex < dgvBill.Rows.Count)
             {
-                txtbIDBill.Text = dgvBill.Rows[e.RowIndex].Cells[0].Value.ToString();
-                cbbNameKH.Text = dgvBill.Rows[e.RowIndex].Cells[1].Value.ToString();
-                dtDateBill.Text = dgvBill.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtbIDBill.Text = dgvBill.Rows[e.RowIndex].Cells["IDHD"].Value.ToString();
+                cbbNameKH.Text = dgvBill.Rows[e.RowIndex].Cells["TenKH"].Value.ToString();
+                dtDateBill.Text = dgvBill.Rows[e.RowIndex].Cells["NgayLap"].Value.ToString();
 
             }
         }
@@ -138,6 +138,7 @@ namespace QuanLyShopPV
 
                 MessageBox.Show("Thêm sản phẩm thành công");
                 bLoadAdmin.GetLoadProduct(dgvProducts, cbbSearchNameProduct);
+                //txtIDProducts=
             }
             else
             {
@@ -251,5 +252,18 @@ namespace QuanLyShopPV
         {
                 
         }
+
+        private void dgvBill_DoubleClick(object sender, EventArgs e)
+        {
+            fCTDetails f = new fCTDetails();
+            f.maHD = Convert.ToString(dgvBill.CurrentRow.Cells["IDHD"].Value);
+            f.ShowDialog();
+        }
+
+        private void dgvBill_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
+

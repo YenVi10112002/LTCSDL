@@ -52,5 +52,11 @@ namespace QuanLyShopPV.BUS
             cbb.DisplayMember = "TenNV";
             cbb.ValueMember = "IDNV";
         }
+
+        public void LoadCTBill(DataGridView dgv, string maHD)
+        {
+            dgv.DataSource = null;
+            dgv.DataSource = dLoadAdmin.LoadCTBill(maHD);
+        }
     }
 }
